@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaLinkedin } from "react-icons/fa";
+import {FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaLinkedin, FaGoogle} from "react-icons/fa";
 import './socialNavbar.scss';
 
 const SocialNavbar = () => {
@@ -6,19 +6,13 @@ const SocialNavbar = () => {
         <div className="social">
             <ul className='social__list'>
                 <li className='social__item'>
-                    <a className='social__link' href=" "><FaFacebookF /></a>
+                    <a className='social__link' href="https://maps.app.goo.gl/N5ms9yneWTvqzwQB6"><FaGoogle /></a>
                 </li>
                 <li className='social__item'>
-                    <a className='social__link' href=" "><FaInstagram /></a>
+                    <a className='social__link' href="https://www.instagram.com/rock_n_roll_hair/"><FaInstagram /></a>
                 </li>
                 <li className='social__item'>
-                    <a className='social__link' href=" "><FaTwitter /></a>
-                </li>
-                <li className='social__item'>
-                    <a className='social__link' href=" "><FaYoutube /></a>
-                </li>
-                <li className='social__item'>
-                    <a className='social__link' href=" "><FaLinkedin /></a>
+                    <a className='social__link' href="https://www.linkedin.com/in/max-tykhonenko-9055b6136/"><FaLinkedin /></a>
                 </li>
             </ul>
         </div>

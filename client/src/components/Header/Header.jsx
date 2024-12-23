@@ -17,14 +17,6 @@ const Header = () => {
                 <img className='header__logo' src={images.Logo} alt="logo" />
             </a>
             <Navbar />
-            {isAuth && <h3 className='header__welcome'>שלום <span>{user.name}</span></h3>}
-            <div className="header__user-icon" onClick={() => { !isAuth ? dispatch(showSidebar('login')) : dispatch(showSidebar('myAccount')) }}>
-                {
-                    user.isBarber ? (<img className="header__avatar" src={images.avatar} alt={user.name + 'avatar'} />
-                    ) : (
-                        <FaUserTie />)
-                }
-            </div>
         </div>
     )
 }
