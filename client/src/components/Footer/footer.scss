@@ -1,0 +1,27 @@
+@import '../../assets/styles/vars';
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+
+    &__copyright {        
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        line-height: 3rem;
+
+        &-logo {
+            width: 1.5rem;
+            margin-left: 1rem;
+            transition: transform .3s ease-in-out;
+
+            &:hover {
+                transform:scale(1.2);
+            }
+        }
+    }
+
+}

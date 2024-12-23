@@ -1,0 +1,66 @@
+@import '../../assets/styles/vars';
+
+.sidebar {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    transform: translateX(100%);
+    transition: transform .6s ease-in-out;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .6);
+    backdrop-filter: blur(5px);
+    animation: show-left .8s ease-in-out;
+
+    &.active {
+        transform: translateX(0);
+    }
+
+    &__wrapper {
+        width: 550px;
+        height: 100%;
+        background-color: $container-color;
+        padding: 1rem;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    &__close {
+        margin-top: 1rem;
+        margin-right: 1rem;
+        font-size: $ltext-font-size;
+        cursor: pointer;
+        opacity: .5;
+        transition: opacity .2s linear;
+
+        &:hover {
+            color: $text-color;
+            opacity: 1;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-size: $ltext-font-size;
+    }
+
+    @media screen and (max-width: 768px) {
+        &__wrapper {
+            width: 100vw;
+        }
+    }
+}
+
+@keyframes show-left {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+

@@ -1,0 +1,83 @@
+@import '../../assets/styles/vars';
+
+.button {
+    font-size: $text-font-size;
+    position: relative;
+    display: flex;
+    padding: 0.2em;
+    border: solid 1px;
+    color: $text-color;
+    border-color: $first-color;
+    cursor: pointer;
+    max-width: 150px;
+    text-align: center;
+
+    &:before,
+    &:after,
+    & span::before,
+    & span::after {
+        transition: all ease .5s;
+    }
+
+    &:hover {
+        box-shadow: 0 0 26rem .1rem $first-color;
+    }
+
+    & span {
+        display: inline-block;
+        width: 100%;
+        padding: 0.2em 0.5em;
+    }
+
+    &:before,
+    &:after,
+    & span::before,
+    & span::after {
+        content: '';
+        position: absolute;
+        border: 1px;
+        opacity: .3;
+        color:$first-color;
+    }
+
+    &:before,
+    & span::before {
+        border-style: solid none;
+    }
+
+    &:before,
+    & span::after {
+        left: 0;
+        top: -0.4em;
+        width: 100%;
+        height: calc(100% + 0.8em);
+    }
+
+    &:after,
+    & span::after {
+        border-style: none solid;
+    }
+
+    &:after,
+    & span::before {
+        top: 0;
+        left: -0.4em;
+        height: 100%;
+        width: calc(100% + 0.8em);
+    }
+
+    &:hover::after,
+    &:hover span::after {
+        transform: scaleY(0);
+    }
+
+    &:hover::before,
+    &:hover span::before {
+        transform: scaleX(0);
+    }
+
+    &:hover span::after,
+    &:hover span::before {
+        opacity: 0;
+    }
+}

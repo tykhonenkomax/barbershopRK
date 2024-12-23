@@ -1,0 +1,78 @@
+@import '../../assets/styles/vars';
+@import '../../assets/styles/mixins';
+
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include bg-img(url('../../assets/images/bg.jpg'));
+        opacity: .5;
+        height: 100vh;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &__descr {
+        margin-top: 1rem;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 4rem;
+    }
+
+    @media screen and (max-width: 1024px){
+        &{
+            text-align: center;
+        }
+
+        &__title {
+            font-size: $h1-mfont-size;
+            line-height: 6rem;
+        }
+
+        &__subtitle {
+            font-size: $h3-mfont-size;
+        }
+
+        &__descr {
+            font-size: $normal-font-size;
+        }
+        &__btn {
+            justify-content: center;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        &__title {
+            font-size: $h3-font-size;
+            line-height: 5rem;
+        }
+
+        &__subtitle {
+            font-size: $text-font-size;
+        }
+
+        &__descr {
+            font-size: $normal-font-size;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+
+        &__title {
+            font-size: $ltext-font-size;
+            line-height: 4rem;
+            margin: 2rem 0;
+        }
+    }
+}

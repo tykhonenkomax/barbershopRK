@@ -1,0 +1,31 @@
+@import '../../assets/styles/vars';
+
+.animateItem {
+   width: 100vw;
+}
+.animate-item-left,
+.animate-item-right {
+    content:"";        
+    position: absolute;
+    transition: all .5s ease-in-out;
+    opacity: .7;    
+}
+
+.animate-item-left {
+    width: 15%;
+    top: -12rem;
+    left: 5rem;
+}
+
+.animate-item-right { 
+    width: 20%;
+    right: 5rem;
+    bottom:-5rem;
+}
+
+@media screen and (max-width: 980px) {
+    .animate-item-left,
+    .animate-item-right {
+        display: none;
+    }
+}

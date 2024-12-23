@@ -1,0 +1,10 @@
+@import '../../assets/styles/vars';
+@import '../../assets/styles/mixins';
+.divider {
+    display: block;
+    @include bg-img(url('../../assets/images/heading-line.png'));    
+    background-size:contain;
+    width: 150px;
+    height: 20px;
+    margin: 2rem auto;
+}        

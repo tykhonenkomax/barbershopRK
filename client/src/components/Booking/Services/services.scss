@@ -1,0 +1,75 @@
+@import '../../../assets/styles/vars';
+
+.service {
+    flex-direction: column;
+    position: relative;
+    pointer-events: none;
+    margin-bottom: 2rem;
+
+    &.active {
+        overflow-x: hidden;
+        &:after {
+            content: '';
+            width: 1rem;
+            height: 100%;
+            background-color: $first-color;
+            left: 0;
+            top:0;
+            position: absolute;
+            animation: onShow .4s linear;
+
+            @keyframes onShow {
+                from{
+                    transform: translateX(-100%);
+                }to{
+                    transform: translateX(0);
+
+                }
+            }
+        }
+    }
+
+    &__img,
+    &__wrapper {
+        pointer-events: none;
+    }
+
+    &__title {
+        font-size: $ltext-font-size;
+        color: $first-color;
+    }
+
+    &__descr {
+        font-size: $text-font-size;
+        letter-spacing: 0.1rem;
+        margin-left: 2rem;
+    }
+
+    &__btn {
+        background: inherit;
+        color: $text-color;
+        border: 1px solid $first-color;
+        padding: 0.5rem 3rem;
+        margin-top: 2rem;
+        cursor: pointer;
+        pointer-events: all;
+        transition: .2s ease-in-out;
+        margin-left: 2rem;
+
+        &:hover {
+            color: black;
+            background-color: $first-color
+        }
+    }
+
+    &__price {
+        color: $first-color;
+        font-size: 2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        & {
+            padding-bottom: 4rem;
+        }
+    }
+}
