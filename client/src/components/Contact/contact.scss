@@ -152,12 +152,13 @@
         margin-top: 1rem;
         font-size: $text-font-size;
         color: $first-color;
-        margin-top: 2rem;
     }
 
     &__right {
         max-width: 100%;
-        max-height: 100%;
+        width: 100%; /* Задаємо 100% ширини */
+        height: auto; /* Висота буде автоматично підлаштовуватись під вміст */
+        min-height: 300px;
     }
 
 

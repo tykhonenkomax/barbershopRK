@@ -29,10 +29,12 @@ import hair_camouflage from '../assets/images/service-hair-camouflage.png';
 import beard_camouflage from '../assets/images/service-camouflage-beard.png';
 import marker_img from '../assets/images/google-map-logo.png';
 import logo_footer from '../assets/images/logo-rk.png';
+import logo from '../assets/images/logo.png';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
     Logo,
+    logo,
     logo_rk,
     avatar,
     avatar1,
