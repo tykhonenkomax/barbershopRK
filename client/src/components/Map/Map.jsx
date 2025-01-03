@@ -7,6 +7,7 @@ import { showLoader } from '../../reducers/loaderReducer';
 
 const Map = () => {
     const dispatch = useDispatch();
+    console.log('process.env.REACT_APP_GOOGLE_MAPS_API_KEY', process.env.REACT_APP_GOOGLE_MAPS_API_KEY)
     const { isLoaded } = useJsApiLoader({
         googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     });
