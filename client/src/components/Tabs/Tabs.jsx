@@ -101,7 +101,7 @@ const tabContents = [
             },
             {
                 title: "Батько та два сини",
-                price: "1000"
+                price: "1200"
             },
             {
                 title: "Дитяча стрижка (до 12 років)",
@@ -119,7 +119,7 @@ const tabContents = [
         contentData: [
             {
                 title: "Стрижка",
-                price: "500"
+                price: "550"
             },
             {
                 title: "Стрижка машинкою",
@@ -127,31 +127,31 @@ const tabContents = [
             },
             {
                 title: "Подовжена стрижка",
-                price: "500"
+                price: "550"
             },
             {
                 title: "Стрижка+моделювання бороди",
-                price: "800"
+                price: "700"
             },
             {
                 title: "Моделювання бороди",
-                price: "250"
+                price: "300"
             },
             {
                 title: "Батько та син",
-                price: "750"
+                price: "800"
             },
             {
                 title: "Батько та два сини",
-                price: "900"
+                price: "1000"
             },
             {
                 title: "Дитяча стрижка (до 12 років)",
-                price: "450"
+                price: "500"
             },
             {
                 title: "Стрижка наголо + моделювання бороди",
-                price: "500"
+                price: "600"
             }
         ]
     },

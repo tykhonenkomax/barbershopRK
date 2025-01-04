@@ -18,8 +18,8 @@ const barbersData = [
     { id: 1, name: "Василь", avatar: avatar1, bookingLink: "https://w.wlaunch.net/c/rock_n_roll_hair/b/4926a617-9693-11ea-8c6f-75bfbdeb2ab4/r/773f2529-d4ec-11ec-adc2-ad681fc007bc/s?p=d52e0c14-9bea-11ec-acf9-01bddefc6073" },
     { id: 2, name: "Олена", avatar: avatar2, bookingLink: "https://w.wlaunch.net/c/rock_n_roll_hair/b/4926a617-9693-11ea-8c6f-75bfbdeb2ab4/r/660a7a41-da89-11ec-b900-4de806f031a9/s" },
     { id: 3, name: "Макс", avatar: avatar3, bookingLink: "https://w.wlaunch.net/c/rock_n_roll_hair/b/4926a617-9693-11ea-8c6f-75bfbdeb2ab4/r/080245a3-9be7-11ec-acf9-01bddefc6073/s" },
-    { id: 4, name: "Саша", avatar: avatar4, bookingLink: "https://example.com/booking/sasha" },
-    { id: 5, name: "Оксана", avatar: avatar5, bookingLink: "https://example.com/booking/oksana" },
+    { id: 4, name: "Саша", avatar: avatar4, bookingLink: "https://w.wlaunch.net/c/rock_n_roll_hair/b/4926a617-9693-11ea-8c6f-75bfbdeb2ab4/r/69142ed2-1cea-11ef-b9da-1da0a621f640/s?p=03d10d6a-aa8c-11ef-af81-c305fb03d722" },
+    { id: 5, name: "Оксана", avatar: avatar5, bookingLink: "https://w.wlaunch.net/c/rock_n_roll_hair/b/4926a617-9693-11ea-8c6f-75bfbdeb2ab4/r/1e5c0199-38e0-11ee-b579-f36d472b6239/s?p=f4c8583d-b780-11ec-95e3-e7f0639bde2f" },
     { id: 6, name: "Рома", avatar: avatar6, bookingLink: "https://w.wlaunch.net/c/rock_n_roll_hair/b/4926a617-9693-11ea-8c6f-75bfbdeb2ab4/r/c6e9344e-9be9-11ec-acf9-01bddefc6073/s?p=d52e0c14-9bea-11ec-acf9-01bddefc6073" },
 ];
 
@@ -38,11 +38,11 @@ const Barbers = () => {
         <section className='barbers' id='barbers'>
             <AnimateItem url={images.razor} side={"left"}/>
             <AOSanimation animation="fade-up" duration="1000">
-                <h2 className="barbers__title">- Наші барбери -</h2>
+                <h2 className="barbers__title">- Наша Команда -</h2>
             </AOSanimation>
             <AOSanimation animation="fade-up" duration="1500">
                 <p className="barbers__descr">
-                    Працюємо важко, залишаємося скромними та надаємо всім <br/>найкращі послуги, які можемо.
+                    Ми не працюємо по шаблону і не маємо корпоративного стилю. Кожен з нас — особистість, <br/>тому знайти свого майстра — це теж частина шляху.
                 </p>
             </AOSanimation>
 

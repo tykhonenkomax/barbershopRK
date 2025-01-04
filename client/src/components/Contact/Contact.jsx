@@ -34,13 +34,13 @@ const Contact = () => {
                 <ul className="contact__workHours-list">
                     <li className="contact__workHours-item">Пн-Пт: 10:00 - 22:00</li>
                     <li className="contact__workHours-item">Субота: 10:00 - 22:00</li>
-                    <li className="contact__workHours-item">Неділя: 10:00-18:00</li>
+                    <li className="contact__workHours-item">Неділя: 10:00-21:00</li>
                 </ul>
             </div>
 
             <div className="contact__info">
                 <ul className="contact__info-list">
-                    <li className="contact__info-item email"><FiMail /> tikhonenko.m@gmaiil.com</li>
+                    <li className="contact__info-item email"><FiMail /> tikhonenko.m@gmail.com</li>
                     <li className="contact__info-item phone"><FiPhone /> 067-67-140-46</li>
                     <li className="contact__info-item address"><FiMapPin /> Львів, вул. Юнаківа, 9в</li>
                 </ul>
