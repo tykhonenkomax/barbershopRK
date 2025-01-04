@@ -1,4 +1,4 @@
-import {FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaLinkedin, FaGoogle} from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaGoogle} from "react-icons/fa";
 import './socialNavbar.scss';
 
 const SocialNavbar = () => {

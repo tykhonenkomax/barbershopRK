@@ -3,7 +3,7 @@
     position: absolute;
     left: 4rem;
     top: 50%;
-    transform: translateY(-50%);  
+    transform: translateY(-50%);
     z-index: 2;
 
     &__list {
@@ -11,7 +11,7 @@
         justify-content: space-between;
         flex-direction: column;
         position: relative;
-        
+
         &:after {
             content:"";
             width: 100%;
@@ -23,7 +23,7 @@
             opacity: .7;
             padding-right: 4rem;
         }
-    }   
+    }
 
     &__item {
         font-size: $text-font-size;
@@ -43,7 +43,7 @@
             position: relative;
 
             &:hover {
-                color: $first-color;                
+                color: $first-color;
             }
         }
     }
@@ -74,6 +74,9 @@
     @media screen and (max-width: 780px) {
         &__item:hover {
             transform: none;
+        }
+        &__list{
+            margin-top: 4rem;
         }
     }
 }

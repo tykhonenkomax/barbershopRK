@@ -1,10 +1,7 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+// import { useState } from 'react';
+// import { useDispatch } from 'react-redux';
 import { AnimateItem, AOSanimation } from '../../components';
-import { showSidebar } from '../../reducers/sidebarReducer';
-// import { barbers } from '../../actions/user';
 import { images } from '../../constants';
-// import { API_URL } from '../../config';
 import './barbers.scss';
 
 import avatar1 from '../../assets/barber_image/avatar_vasil.jpg';
@@ -25,9 +22,8 @@ const barbersData = [
 
 
 const Barbers = () => {
-    const dispatch = useDispatch();
-    const [barbersList, setBarbersList] = useState(barbersData);
-    const bookingLink = "https://w.wlaunch.net/c/rock_n_roll_hair/b/4926a617-9693-11ea-8c6f-75bfbdeb2ab4/s";
+    // const dispatch = useDispatch();
+    // const [barbersList, setBarbersList] = useState(barbersData);
 
     // useEffect(() => {
     //     dispatch(barbers()).then(result => setBarbersList(result))
@@ -49,7 +45,7 @@ const Barbers = () => {
             <div className="barbers__wrapper container">
                 <div className="barbers__avatars-list">
                     {
-                        barbersList && barbersList.map(barber => (
+                        barbersData.map(barber => (
                             <div className="barbers__avatar" key={barber.id}>
                                 <div className="barbers__front">
                                     <img className="barbers__img" src={barber.avatar} alt={barber.name}/>
@@ -61,7 +57,6 @@ const Barbers = () => {
                                     <img className="barbers__img" src={barber.avatar} alt={barber.name}/>
                                     <div className="inner">
                                         <span className='barbers__btn' onClick={() => {
-                                            dispatch(showSidebar('booking'));
                                             window.location.href = barber.bookingLink;
                                         }}>Забронювати зараз</span>
                                     </div>
