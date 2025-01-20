@@ -41,8 +41,12 @@ const Contact = () => {
             <div className="contact__info">
                 <ul className="contact__info-list">
                     <li className="contact__info-item email"><FiMail /> tikhonenko.m@gmail.com</li>
-                    <li className="contact__info-item phone"><FiPhone /> 067-67-140-46</li>
-                    <li className="contact__info-item address"><FiMapPin /> Львів, вул. Юнаківа, 9в</li>
+                    <li className="contact__info-item phone">
+                        <a href="tel: 0676714046" className="phone-link" target="_blank" rel="noopener noreferrer">
+                            <FiPhone/> 067-67-140-46
+                        </a>
+                    </li>
+                    <li className="contact__info-item address"><FiMapPin/> Львів, вул. Юнаківа, 9в</li>
                 </ul>
             </div>
 

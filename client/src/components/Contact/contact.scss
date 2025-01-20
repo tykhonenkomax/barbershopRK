@@ -3,7 +3,10 @@
 .contact {
     text-align: center;
     position: relative;
-
+    .phone-link {
+        text-decoration: none;
+        color: inherit;
+    }
 
     &__workHours {
         margin-top: 1rem;

@@ -66,8 +66,9 @@ const Navbar = () => {
                     <ul className="nav__list">
                         {menu.map((link) =>
                             <li className={link.ref === activeNav ? 'nav__item active' : 'nav__item'}
-                                onClick={handleClick}>
-                                <a href={link.ref} key={link.id}>{link.title}</a>
+                                key={link.id}
+                                onClick={(e) => handleClick(e, link.ref)}>
+                                <a href={link.ref}>{link.title}</a>
                             </li>
                         )}
                         <a href="https://w.wlaunch.net/c/rock_n_roll_hair/b/4926a617-9693-11ea-8c6f-75bfbdeb2ab4/s">
@@ -117,6 +118,12 @@ const menuLinks = [
         id: 6,
         title: "Контакти",
         ref: "#contact",
+        active: false
+    },
+    {
+        id: 7,
+        title: "Залишити відгук",
+        ref: "https://g.page/r/CTJA_DdBBT9DEAE/review",
         active: false
     }
 ];
