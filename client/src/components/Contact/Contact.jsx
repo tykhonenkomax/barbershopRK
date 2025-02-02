@@ -40,19 +40,30 @@ const Contact = () => {
 
             <div className="contact__info">
                 <ul className="contact__info-list">
-                    <li className="contact__info-item email"><FiMail /> tikhonenko.m@gmail.com</li>
+                    <li className="contact__info-item email">
+                        <a href="mailto:tikhonenko.m@gmail.com">
+                            <FiMail/> tikhonenko.m@gmail.com
+                        </a>
+                    </li>
+
                     <li className="contact__info-item phone">
                         <a href="tel: 0676714046" className="phone-link" target="_blank" rel="noopener noreferrer">
                             <FiPhone/> 067-67-140-46
                         </a>
                     </li>
-                    <li className="contact__info-item address"><FiMapPin/> Львів, вул. Юнаківа, 9в</li>
+                    <li className="contact__info-item address">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=49.847, 24.001" target="_blank"
+                           rel="noopener noreferrer">
+                            <FiMapPin/> Львів, вул. Юнаківа, 9в
+                        </a>
+                    </li>
+
                 </ul>
             </div>
 
             <div className="contact__wrapper">
                 <div className="contact__right">
-                    <Map />
+                <Map/>
                 </div>
 
                 {/*<div className="contact__left">*/}

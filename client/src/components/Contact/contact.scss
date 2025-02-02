@@ -1,11 +1,22 @@
 @import '../../assets/styles/vars';
 
+.contact__info-item.address a {
+    color: white;
+    text-decoration: none;
+}
+.contact__info-item.email a {
+    color: white;
+    text-decoration: none;
+}
 .contact {
     text-align: center;
     position: relative;
     .phone-link {
         text-decoration: none;
         color: inherit;
+    }
+    &__address{
+        text-decoration: none;
     }
 
     &__workHours {
