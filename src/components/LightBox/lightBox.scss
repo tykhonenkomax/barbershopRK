@@ -1,0 +1,65 @@
+@import '../../assets/styles/vars';
+
+.lightBox { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .7);
+    transition: .3s all easy;     
+
+    &__dialog {
+        max-width: 800px;    
+        margin: auto;  
+        transition: .3s all easy;
+    }
+    
+    &__content {
+        position: relative;
+        width: 100%;
+        padding:5rem;   
+        border-radius: 1.25rem;
+        max-height: 80vh;
+        overflow-y: auto;        
+    }
+
+    & img {
+        object-fit: cover;        
+    }
+    
+    &__close {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 5rem;
+        color: $text-color;
+        opacity: .5;
+        font-weight: 700;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover {
+            color:$title-color;
+        }
+    }  
+    
+    &.show {
+        z-index: 99999;
+        opacity: 1;
+        transition: .4s ease-in-out;
+    }
+    
+    &.hide {
+        opacity: 0;
+        transition: .3s ease-in-out;
+        z-index: -1;
+    }
+}
+
+
+

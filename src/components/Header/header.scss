@@ -1,0 +1,95 @@
+@import '../../assets/styles/vars';
+
+.header {
+    height: $header-height;
+    width: 100%;
+    height: 11vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $container-color;
+    z-index: 9;
+    transition: all 0.5s ease-in-out;
+
+    &__logo {
+        height: 80px;
+        margin-right: 2rem;
+    }
+
+    &__welcome {
+        font-size: $text-font-size;
+        margin-left: 1rem;
+
+        & span {
+            color: $first-color;
+            text-transform: capitalize;
+        }
+    }
+
+    &__user-icon {
+        border-radius: 50%;
+        border: 2px solid $first-color;
+        cursor: pointer;
+        color: $first-color;
+
+        & img {
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        & svg {
+            width: 40px;
+            height: 30px;
+            font-size: 2.8rem;
+            padding: 0.5rem 0.7rem 0.2rem 0.7rem;
+        }
+    }
+
+    &.sticky {
+        z-index: -1;
+        opacity: 0;
+    }
+
+    @media screen and (max-width: 1024px) {
+        &__logo {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        & {
+            height: 9vh;
+        }
+
+        &__user-icon {
+            & img {
+                width: 30px;
+                height: 30px;
+            }
+
+            & svg {
+                width: 30px;
+                height: 25px;
+                font-size: 2.4rem;
+            }
+        }
+
+        &__logo {
+            height: 50px;
+        }
+
+        &__welcome {
+            display: none;
+        }
+
+    }
+}

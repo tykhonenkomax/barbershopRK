@@ -1,0 +1,171 @@
+@import '../../assets/styles/vars';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+
+    &__close,
+    &__hamburger {
+        display: none;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }   
+
+    .nav {
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+        }      
+
+        &__item {
+            font-size: $text-font-size;
+
+            &.active a{
+                color: $first-color;
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -6px;
+                    left: 0;
+                    width: 90%;
+                    height: 1px;
+                    transition: .2s linear;
+                    background-color: $first-color;
+                }
+        
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -2px;
+                    right: 0;
+                    width: 90%;
+                    height: 1px;
+                    transition: .2s linear;
+                    background-color: $first-color;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-left: 3rem;
+            }
+
+            & a {
+                color: $text-color;
+                transition: .2s ease-in-out;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -6px;
+                    left: 0;
+                    width: 0;
+                    height: 1px;
+                    transition: .2s linear;
+                    background-color: $first-color;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -2px;
+                    right: 0;
+                    width: 0;
+                    height: 1px;
+                    transition: .2s linear;
+                    background-color: $first-color;
+                }
+
+                &:hover {
+                    color: $first-color;
+                    &:after,
+                    &:before {
+                        width: 90%;
+                    }
+                }
+            }
+        }        
+    }
+
+    &__divider {
+        display: none;
+    }
+
+    @media screen and (max-width: 1024px) {
+        & { 
+           width: auto;
+           margin-left: auto;
+           margin-right: 0;
+
+            &__hamburger,
+            &__close {
+                font-size: $text-mfont-size;
+                margin-top: 6px;
+                z-index: 10;           
+            }
+
+            &__close {
+                font-size: 3rem;
+            }
+
+            .btn_show {
+                display: block;
+            }
+
+            .btn_hide {
+                display: none;
+            }
+            
+            &__wrapper {
+                position: absolute;
+                overflow: hidden;
+                top: 0;
+                left: 0;
+                transform: translateX(1000px);
+                width: 100vw;
+                height: 100vh;
+                background-color: $container-color;
+                backdrop-filter: blur(26px);
+                z-index: 2;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                
+                &.show {
+                    transition: .3s ease-in-out; 
+                    transform: translateX(0);
+                }
+                &.hide { 
+                    transition: .3s ease-in-out; 
+                    transform: translateX(1000px);
+                }
+            }
+
+            .nav {
+                z-index: 10;
+                &__list {
+                    flex-direction: column;
+                }
+
+                &__item:not(:last-child) {
+                    margin: 0;
+                    margin-bottom: 2rem;
+                }
+
+                &__item a {
+                    font-size: 3rem;
+                }
+            }               
+        }
+    }
+}

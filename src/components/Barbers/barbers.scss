@@ -1,0 +1,237 @@
+@import '../../assets/styles/vars';
+.barbers__avatars-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три колонки на широких екранах */
+    gap: 20px;
+    justify-items: center;
+    margin: 0 auto; /* Центруємо контейнер */
+}
+.barbers {
+    padding: 3rem 0;
+    text-align: center;
+    background-image: radial-gradient(circle, #090207, #0a0208, #0b0309, #0c0309, #0d030a);
+    position: relative;
+
+    &__wrapper {
+        padding: 2rem 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__avatar {
+        transform-style: preserve-3d;
+        perspective: 1000px;
+        margin-top: 3rem;
+    }
+
+    &__img {
+        z-index: 10;
+        opacity: .6;
+        position: relative;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        padding: 1rem;
+        border-radius: 50%;
+    }
+
+    &__front,
+    &__back {
+        background-size: cover;
+        background-position: center;
+        min-height: 200px;
+        height: auto;
+        border-radius: 50%;
+        text-align: center;
+        color: $title-color;
+        transition: -webkit-transform 1s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: transform 1s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: transform 1s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        border: 2px solid $first-color;
+    }
+
+    &__back {
+        background: $container-color;
+    }
+
+    &__front:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        content: '';
+        display: block;
+        background-color: #000;
+        backface-visibility: hidden;
+        border-radius: 50%;
+    }
+
+    &__avatar:hover &__front,
+    &__avatar:hover &__back {
+        transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    }
+
+    &__back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .inner {
+        position: absolute;
+        transform: translateY(-50%) translateZ(60px) scale(0.94);
+        bottom: 2.5rem;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+    }
+
+    &__name,
+    &__btn {
+        font-size: calc($ltext-font-size * 0.8);
+        color: $text-color;
+        text-align: center;
+    }
+
+    &__name {
+        inline-size: 100%;
+        margin: auto;
+        word-break: break-all;
+    }
+
+    &__btn {
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 90%;
+            height: 1px;
+            transition: .2s linear;
+            background-color: $first-color;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            right: 0;
+            width: 90%;
+            height: 1px;
+            transition: .2s linear;
+            background-color: $first-color;
+        }
+
+        &:hover {
+            color: $first-color;
+        }
+    }
+
+    &__avatar &__back {
+        transform: rotateY(180deg);
+        transform-style: preserve-3d;
+    }
+
+    &__avatar &__front {
+        transform: rotateY(0deg);
+        transform-style: preserve-3d;
+    }
+
+    &__avatar:hover &__back {
+        transform: rotateY(0deg);
+        transform-style: preserve-3d;
+    }
+
+    &__avatar:hover &__front {
+        transform: rotateY(-180deg);
+        transform-style: preserve-3d;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .barbers__avatars-list {
+            grid-template-columns: repeat(2, 1fr); /* Два елементи в ряд */
+        }
+        &__avatar &__back {
+            transform: rotateY(180deg);
+            transform-style: preserve-3d;
+        }
+        &__title {
+            font-size: $h1-mfont-size;
+            line-height: 6rem;
+        }
+
+        &__descr {
+            font-size: $normal-font-size;
+        }
+
+        &__img {
+            width: 200px;
+            height: 200px;
+        }
+
+        &__front,
+        &__back {
+            min-height: 200px;
+        }
+    }
+
+    @media screen and (max-width: 780px) {
+        .barbers__avatars-list {
+            grid-template-columns: repeat(2, 1fr); /* 2 items in a row for tablets */
+        }
+        &__avatar &__back {
+            transform: rotateY(180deg);
+            transform-style: preserve-3d;
+        }
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__avatar:not(:first-child) {
+            margin-top: 3rem;
+        }
+
+        &__img {
+            width: 150px;
+            height: 150px;
+        }
+
+        &__front,
+        &__back {
+            min-height: 150px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .barbers__avatars-list {
+            grid-template-columns: repeat(2, 1fr); /* 1 item per row for mobile */
+        }
+        &__avatar &__back {
+            transform: rotateY(180deg);
+            transform-style: preserve-3d;
+        }
+        & {
+            padding: 2rem 0;
+        }
+
+        &__title {
+            font-size: $ltext-font-size;
+            line-height: 4rem;
+        }
+
+        &__descr {
+            max-width: 70%;
+            margin: auto;
+        }
+    }
+}
